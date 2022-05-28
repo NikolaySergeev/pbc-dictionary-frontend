@@ -9,4 +9,4 @@ new Vue({
   el: '#vue-frontend-app',
   router,
   render: h => h(App)
-})
+}).$mount('#vue-frontend-app')

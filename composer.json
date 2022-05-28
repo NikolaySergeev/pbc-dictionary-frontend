@@ -1,6 +1,6 @@
 {
-    "name": "tareq1988/vue-wp-starter",
-    "description": "A WordPress Vue.js starter plugin",
+    "name": "NikolaySergeev/pbc-dictionary-frontend",
+    "description": "PBC Dictionary Frontend",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [

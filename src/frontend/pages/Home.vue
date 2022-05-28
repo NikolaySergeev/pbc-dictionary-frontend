@@ -7,13 +7,17 @@
 
 <script>
 import Words from 'frontend/components/Words.vue'
+
 export default {
   name: 'Home',
+  components: {
+    Words
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js Frontend App +'
     }
-  }
+  },
 }
 </script>
 

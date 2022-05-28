@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('css-minimizer-webpack-plugin');
 const config = require( './config.json' );
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -65,6 +65,7 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      '^vuetify': path.resolve(__dirname, 'node_modules/vuetify'),
       '@': path.resolve('./src/'),
       'frontend': path.resolve('./src/frontend/'),
       'admin': path.resolve('./src/admin/'),
@@ -111,7 +112,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.png$/,
+        test: /\.(png|jpg|gif)$/i,
+        dependency: { not: ['url'] },
         use: [
           {
             loader: 'url-loader',
@@ -119,7 +121,8 @@ module.exports = {
               mimetype: 'image/png'
             }
           }
-        ]
+        ],
+        type: 'javascript/auto'
       },
       {
         test: /\.svg$/,
