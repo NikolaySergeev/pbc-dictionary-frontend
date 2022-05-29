@@ -6,6 +6,8 @@
   "author": "Nikolay Sergeev",
   "license": "GPL-2.0-or-later",
   "scripts": {
+    "dev-frontend": "vue-cli-service serve ./src/frontend/main.js",
+    "dev-admin": "vue-cli-service serve ./src/admin/main.js",
     "serve": "webpack serve --progress",
     "build": "webpack",
     "prod": "http-server ./dist -a localhost -p 8000 -o"
@@ -16,10 +18,12 @@
     "webpack boilerplate"
   ],
   "dependencies": {
+    "@vue/cli-service": "^5.0.4",
     "axios": "^0.27.2",
     "browser-sync": "^2.27.10",
     "core-js": "^3.10.0",
     "vue": "^2.6.12",
+    "vue-axios": "^3.4.1",
     "vue-router": "^3.5.1",
     "whatwg-fetch": "^3.6.2"
   },
@@ -39,7 +43,7 @@
     "copy-webpack-plugin": "^6.2.1",
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.0",
-    "css-minimizer-webpack-plugin": "^1.3.0",
+    "css-minimizer-webpack-plugin": "^4.0.0",
     "dart-sass": "^1.25.0",
     "html-webpack-plugin": "^5.0.0-alpha.7",
     "less": "^4.1.2",
@@ -55,7 +59,7 @@
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.1.3",
     "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.0",
+    "webpack-dev-server": "^4.9.0",
     "webpack-merge": "^5.2.0"
   },
   "repository": {
