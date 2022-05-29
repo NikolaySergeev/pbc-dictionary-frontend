@@ -13,6 +13,10 @@ export default {
     return {
 
     };
+  }, 
+  async mounted() {
+
+    
   }
 };
 </script>
