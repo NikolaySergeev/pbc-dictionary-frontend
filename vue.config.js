@@ -16,8 +16,8 @@ module.exports = {
         ]
       },
     },
-    chainWebpack: config => config.plugins.delete('named-chunks'),
-    pages: {
+    // chainWebpack: config => config.plugins.delete('named-chunks'),
+    /*pages: {
       frontend: {
         // entry for the page
         entry: './src/frontend/main.js',
@@ -46,5 +46,5 @@ module.exports = {
         // extracted common chunks and vendor chunks.
         chunks: ['chunk-vendors', 'chunk-common', 'index']
       },
-    }
+    }*/
   }

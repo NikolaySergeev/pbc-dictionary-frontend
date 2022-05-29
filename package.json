@@ -6,7 +6,8 @@
   "author": "Nikolay Sergeev",
   "license": "GPL-2.0-or-later",
   "scripts": {
-    "dev": "vue-cli-service serve",
+    "dev-frontend": "vue-cli-service serve ./src/frontend/main.js",
+    "dev-admin": "vue-cli-service serve ./src/admin/main.js",
     "serve": "webpack serve --progress",
     "build": "webpack",
     "prod": "http-server ./dist -a localhost -p 8000 -o"
