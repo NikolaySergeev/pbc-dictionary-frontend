@@ -28,6 +28,7 @@ config.codekit
 /libpeerconnection.log
 npm-debug.log
 testem.log
+package-lock.json
 
 # Compiled source #
 ###################
