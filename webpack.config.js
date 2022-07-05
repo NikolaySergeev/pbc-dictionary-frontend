@@ -137,7 +137,7 @@ module.exports = {
               publicPath: (resourcePath, context) => {
                 return path.relative(path.dirname(resourcePath), context) + '/';
               },
-              hmr: process.env.NODE_ENV === 'development',
+              //hmr: process.env.NODE_ENV === 'development',
             },
           },
           'css-loader',

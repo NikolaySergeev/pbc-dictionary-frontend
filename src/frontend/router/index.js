@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from 'frontend/pages/Home.vue'
+import Glossary from 'frontend/pages/Glossary.vue'
+import Catalogue from 'frontend/pages/Catalogue.vue'
 import Profile from 'frontend/pages/Profile.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -12,8 +13,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: 'Glossary',
+      component: Glossary
+    },
+    {
+      path: '/catalogue',
+      name: 'Catalogue',
+      component: Catalogue
     },
     {
       path: '/profile',
